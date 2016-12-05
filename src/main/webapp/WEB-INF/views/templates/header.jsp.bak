@@ -1,0 +1,113 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: Saurabh
+  Date: 11/2/2016
+  Time: 1:31 AM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Fitfreak Home!</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="<c:url value = "/resources/css/detailstyle.css" />" type="text/css" media="all" />
+
+
+    <script
+            src="https://code.jquery.com/jquery-1.8.3.min.js"
+            integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8="
+            crossorigin="anonymous"></script>
+    <!--[if IE 6]>
+    <script src="<c:url value = "/resources/js/DD_belatedPNG-min.js" />" type="text/javascript" charset="utf-8"></script>
+    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+    <script src="<c:url value = "/resources/js/cufon-yui.js" />" type="text/javascript"></script>
+    <script src="<c:url value = "/resources/js/Myriad_Pro_700.font.js" />" type="text/javascript"></script>
+    <script src="<c:url value = "/resources/js/jquery.jcarousel.min.js" />" type="text/javascript" charset="utf-8"></script>
+    <script src="<c:url value = "/resources/js/functions.js" />" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="<c:url value = "/resources/css/normalize.css" />" />
+    <link rel="stylesheet" type="text/css" href="<c:url value = "/resources/css/demo.css" />" />
+    <link rel="stylesheet" type="text/css" href="<c:url value = "/resources/css/component.css" />" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="<c:url value = "/resources/js/modernizr.custom.js" />"></script>
+    <script src="<c:url value="/resources/js/jquery.elevatezoom.js" />"></script>
+    <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
+</head>
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+    <!-- Begin Header -->
+    <div id="header">
+        <!-- Begin Shell -->
+        <div class="shell">
+            <h1 id="logo"><a class="notext" href="<c:url value="/" />" title="fitfreak">fitfreak</a><i>Its on us</i></h1>
+            <div id="top-nav">
+                <ul>
+                    <li class="active"><a href="<c:url value="/" />" title="Home"><span>Home</span></a></li>
+                    <li><a href="<c:url value = "/product/productList" />" title="products"><span>Get all Products</span></a></li>
+                    <c:if test="${pageContext.request.userPrincipal.name == null}">
+                        <li><a href="<c:url value="/register" />" title="register"><span>Sign Up</span></a></li>
+                        <li><a href="<c:url value="/login" />" title="Login"><span>Login</span></a></li></c:if>
+                </ul>
+            </div>
+            <div class="cl">&nbsp;</div>
+            <p id="cart"><span class="profile">Welcome
+                <c:if test="${pageContext.request.userPrincipal.name != null}">
+                    <a title="Profile Link">${pageContext.request.userPrincipal.name}</a>
+                    <a href="<c:url value="/j_spring_security_logout" />" title="logout">| Logout</a>
+                    <c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
+                        <span class="shopping"><a href="<c:url value="/customer/cart" />" title="Shopping Cart">Shopping Cart | </a></span>
+                    </c:if>
+                    <c:if test="${pageContext.request.userPrincipal.name == 'admin'}">
+                        <span><a href="<c:url value="/admin" />" title="admin">Administrator</a></span>
+                    </c:if>
+                </c:if>
+                </span></p>
+        </div>
+        <!-- End Shell -->
+    </div>
+    <!-- End Header -->
+    <!-- Begin Navigation -->
+    <div id="navigation">
+        <!-- Begin Shell -->
+        <div class="shell">
+            <ul>
+                <li class="active"><a href="#" title="Mens">Mens</a></li>
+                <li><a href="#" title="Ladies">Ladies</a></li>
+                <li><a href="#" title="Kids">Kids</a></li>
+                <li>
+                    <a href="#" title="Football">Football</a>
+                    <div class="dd">
+                        <ul>
+                            <li><a href="#" title="Drop down menu 1">Drop down menu 1</a></li>
+                            <li><a href="#" title="Drop down menu 2">Drop down menu 2</a></li>
+                            <li>
+                                <a href="#" title="Drop down menu 3">Drop down menu 3</a>
+                                <div class="dd">
+                                    <ul>
+                                        <li><a href="#" title="Drop down menu 1">Drop down menu 1</a></li>
+                                        <li><a href="#" title="Drop down menu 2">Drop down menu 2</a></li>
+                                        <li><a href="#" title="Drop down menu 3">Drop down menu 3</a></li>
+                                        <li><a href="#" title="Drop down menu 4">Drop down menu 4</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="#" title="Drop down menu 4">Drop down menu 4</a></li>
+                            <li><a href="#" title="Drop down menu 5">Drop down menu 5</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#" title="Accessories">Accessories</a></li>
+                <li><a href="#" title="Sports">Sports</a></li>
+                <li><a href="#" title="Brands">Brands</a></li>
+                <li><a href="#" title="Promos">Promos</a></li>
+                <li><a href="#" title="Clinic">Clinic</a></li>
+                <li class="sale-item"><a href="#" title="Sale">Sale</a></li>
+            </ul>
+            <div class="cl">&nbsp;</div>
+        </div>
+        <!-- End Shell -->
+    </div>
+    <!-- End Navigation -->

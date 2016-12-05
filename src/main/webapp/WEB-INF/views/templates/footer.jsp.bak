@@ -1,0 +1,19 @@
+<!-- Begin Footer -->
+<div id="footer">
+
+    <div class="copy">
+        <!-- Begin Shell -->
+        <div class="shell">
+            <br/>
+            <h1 id="logo1"><a class="notext" href="<c:url value="/" />" title="fitfreak"><img src="<c:url value = "/resources/css/images/logo.png" />" alt="Product Image" /></a><br/><h2>Its on us</h2></h1>
+            <p>All rights reserved &reg;</p>
+            <div class="cl">&nbsp;</div>
+        </div>
+        <!-- End Shell -->
+    </div>
+</div>
+<!-- End Footer -->
+</div>
+<!-- End Wrapper -->
+</body>
+</html>
